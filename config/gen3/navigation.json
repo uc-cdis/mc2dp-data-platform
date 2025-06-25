@@ -13,6 +13,12 @@
     },
     "items": [
       {
+        "icon": "gen3:exploration",
+        "href": "/Explorer",
+        "name": "Exploration",
+        "tooltip": "The Exploration Page enables discovery of the data at the subject level and features a cohort builder."
+      },
+      {
         "icon": "gen3:query",
         "href": "/Discovery",
         "name": "Discovery",

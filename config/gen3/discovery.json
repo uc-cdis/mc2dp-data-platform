@@ -149,9 +149,9 @@
       "studyColumns": [
         {
           "name": "MC2DP Global ID",
-          "field": "prometheus_global_id",
+          "field": "mc2dp_global_id",
           "errorIfNotAvailable": false,
-          "valueIfNotAvailable": "",
+          "valueIfNotAvailable": "not set",
           "contentType": "string",
           "cellRenderFunction": "truncated",
           "params": {

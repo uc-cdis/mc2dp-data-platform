@@ -13,6 +13,12 @@
     },
     "items": [
       {
+        "icon": "gen3:exploration",
+        "href": "/Explorer",
+        "name": "Exploration",
+        "tooltip": "The Exploration Page enables discovery of the data at the subject level and features a cohort builder."
+      },
+      {
         "icon": "gen3:query",
         "href": "/Discovery",
         "name": "Discovery",
@@ -41,6 +47,18 @@
         "href": "/Analysis",
         "name": "Analysis",
         "tooltip": "Learn how to use Jupyter Notebooks to explore and visualize data available by running a tutorial notebook, or use one of these examples as a launching point for your own custom analysis."
+      },
+      {
+        "icon": "gen3:cohort-network",
+        "href": "/app/CohortDiscovery",
+        "name": "Cohort Discovery",
+        "tooltip": "The cohort discovery application is designed to assist researchers, clinicians, and data scientists in quickly identifying and exploring subsets of individuals from large datasets based on specific criteria."
+      },
+      {
+        "icon": "gen3:list",
+        "href": "/DataLibrary",
+        "name": "Data Library",
+        "tooltip": "Create and manage lists of data"
       },
       {
         "name": "Workspace",

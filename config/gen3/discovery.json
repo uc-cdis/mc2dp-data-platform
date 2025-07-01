@@ -3,7 +3,7 @@
     {
       "label": "Subjects",
       "tableConfig": {
-        "selectableRows": false,
+        "selectableRows": true,
         "expandableRows": true
       },
       "features": {
@@ -72,6 +72,23 @@
           "tagSearchDropdown": {
             "enabled": true,
             "collapsibleButtonText": "Data Commons"
+          },
+          "exportFromDiscovery" : {
+            "enabled": "true",
+            "buttons" : [ {
+              "type" : "addToDataLibrary",
+              "requiresLogin" : "true"
+            }
+            ],
+            "exportDataFields" : {
+              "dataObjectField": "__manifest",
+              "datasetIdField": "subject_id",
+              "dataObjectIdField": "object_id",
+              "dataObjectNameField" : "file_name",
+              "dataObjectSizeField" : "file_size",
+              "dataObjectMd5SumField": "md5",
+              "dataObjectUrlField": "commons_url"
+            }
           },
           "exportToWorkspace": {
             "enabled": true,

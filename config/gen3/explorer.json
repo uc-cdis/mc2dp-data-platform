@@ -54,7 +54,7 @@
         "title": "Details"
       },
       "fields": [
-        "gen3_discovery.prometheus_global_id",
+        "gen3_discovery.mc2dp_global_id",
         "gen3_discovery.is_synthetic",
         "gen3_discovery.subject_cancer_type",
         "gen3_discovery.subject_primary_disease",
@@ -66,7 +66,7 @@
         "gen3_discovery.commons_name"
       ],
       "columns": {
-        "gen3_discovery.prometheus_global_id": {
+        "gen3_discovery.mc2dp_global_id": {
           "title": "MC2DP GLOBAL ID"
         },
         "gen3_discovery.is_synthetic": {
@@ -202,13 +202,13 @@
         "title": "Subject Details"
       },
       "fields": [
-        "gen3_discovery.prometheus_global_id",
+        "gen3_discovery.mc2dp_global_id",
         "gen3_discovery.is_synthetic",
         "gen3_discovery.subject_cancer_grade",
         "gen3_discovery.subject_cancer_type"
       ],
       "columns": {
-        "gen3_discovery.prometheus_global_id": {
+        "gen3_discovery.mc2dp_global_id": {
           "title": "MC2DP GLOBAL ID"
         },
         "gen3_discovery.subject_primary_disease": {

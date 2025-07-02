@@ -65,40 +65,30 @@
               "subject_gender",
               "subject_race",
               "subject_ethnicity",
-              "subject_id",
+              "gen3MDSGUID",
               "data_source"
             ]
           },
           "tagSearchDropdown": {
             "enabled": true,
             "collapsibleButtonText": "Data Commons"
-          },
-          "exportFromDiscovery" : {
-            "enabled": "true",
-            "buttons" : [ {
-              "type" : "addToDataLibrary",
-              "requiresLogin" : "true"
-            }
-            ],
-            "exportDataFields" : {
-              "dataObjectField": "__manifest",
-              "datasetIdField": "subject_id",
-              "dataObjectIdField": "object_id",
-              "dataObjectNameField" : "file_name",
-              "dataObjectSizeField" : "file_size",
-              "dataObjectMd5SumField": "md5",
-              "dataObjectUrlField": "commons_url"
-            }
-          },
-          "exportToWorkspace": {
-            "enabled": true,
-            "manifestFieldName": "__manifest",
-            "enableDownloadManifest": true,
-            "downloadManifestButtonText": "Download",
-            "documentationLinks": {
-              "gen3Client": "https://gen3.org/resources/user/gen3-client/",
-              "gen3Workspaces": "https://gen3.org/resources/user/analyze-data/"
-            }
+          }
+        },
+        "exportFromDiscovery" : {
+          "enabled": "true",
+          "buttons" : [ {
+            "type" : "addToDataLibrary",
+            "requiresLogin" : "true"
+          }
+          ],
+          "exportDataFields" : {
+            "dataObjectField": "_manifest",
+            "datasetIdField": "gen3MDSGUID",
+            "dataObjectIdField": "object_id",
+            "dataObjectNameField" : "file_name",
+            "dataObjectSizeField" : "file_size",
+            "dataObjectMd5SumField": "md5",
+            "dataObjectUrlField": "commons_url"
           }
         },
         "authorization": {
@@ -166,7 +156,7 @@
       "studyColumns": [
         {
           "name": "MC2DP Global ID",
-          "field": "mc2dp_global_id",
+          "field": "gen3MDSGUID",
           "errorIfNotAvailable": false,
           "valueIfNotAvailable": "not set",
           "contentType": "string",
@@ -265,7 +255,7 @@
             "fields": [
               {
                 "name": "MC2DP Global ID",
-                "field": "prometheus_global_id",
+                "field": "subject_id",
                 "contentType": "string"
               },
               {
@@ -345,7 +335,7 @@
       "minimalFieldMapping": {
         "tagsListFieldName": "tags",
         "authzField": "authz",
-        "uid": "_unique_id"
+        "uid": "gen3MDSGUID"
       },
       "tags": {
         "tagCategories": [

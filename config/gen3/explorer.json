@@ -133,7 +133,7 @@
     "loginForDownload": false,
     "guppyConfig": {
       "dataType": "metadata",
-      "nodeCountTitle": "Subjects",
+      "nodeCountTitle": "Subject",
       "fieldMapping": [
         {
           "field": "gen3_discovery.subject_id",
@@ -242,7 +242,7 @@
           "name": "Cancer Type"
         }
       ],
-      "nodeCountTitle": "Subjects",
+      "nodeCountTitle": "Study",
       "manifestMapping": {
         "resourceIndexType": "subject",
         "resourceIdField": "subject_id",

@@ -156,9 +156,9 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
           </Table.Thead>
           <Table.Tbody>{rows}</Table.Tbody>
         </Table>
-        <p><Mark className={bgColors.GREEN}>Green color</Mark>: connection established with real data</p>
-        <p><Mark className={bgColors.ORANGE}>Orange color</Mark>: connection established with synthetic data</p>
-        <p><Mark className={bgColors.RED}>Red color</Mark>: connection not working/connection pending/data pending</p>
+        <p><Mark className={bgColors['[Established - Real Data]']}>Green color</Mark>: connection established with real data</p>
+        <p><Mark className={bgColors['[Synthetic Data]']}>Orange color</Mark>: connection established with synthetic data</p>
+        <p><Mark className={bgColors['[Data Pending]']}>Red color</Mark>: connection not working/connection pending/data pending</p>
       </div>
     </NavPageLayout>
   );

@@ -14,7 +14,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "cohortStudy": "APOLLO LUAD",
       "description": "Genomics",
       "type": "API",
-      "status": "GREEN",
+      "status": "[Established - Real Data]",
       "patients": "100/100"
     },
     {
@@ -22,7 +22,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "cohortStudy": "APOLLO LUAD",
       "description": "Proteomics",
       "type": "API",
-      "status": "GREEN",
+      "status": "[Established - Real Data]",
       "patients": "100/100"
     },
     {
@@ -30,55 +30,55 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "cohortStudy": "APOLLO OV",
       "description": "Genomics",
       "type": "API",
-      "status": "RED",
-      "patients": "0/…"
+      "status": "[Established - Real Data Pending]",
+      "patients": "0/70"
     },
     {
       "source": "PDC",
       "cohortStudy": "APOLLO OV",
       "description": "Proteomics",
       "type": "API",
-      "status": "GREEN",
-      "patients": ""
+      "status": "[Established - Real Data]",
+      "patients": "70/70"
     },
     {
       "source": "Windber",
       "cohortStudy": "APOLLO 5",
       "description": "Clinical Metadata",
       "type": "API",
-      "status": "ORANGE",
-      "patients": ""
+      "status": "[Synthetic Data]",
+      "patients": "56/56"
     },
     {
       "source": "Windber",
       "cohortStudy": "APOLLO 5",
       "description": "Clinical Detailed",
       "type": "API",
-      "status": "ORANGE",
-      "patients": ""
+      "status": "[Connection Pending]",
+      "patients": "0/56"
     },
     {
       "source": "Windber",
       "cohortStudy": "PROMETHEUS 8A",
       "description": "Clinical Metadata",
       "type": "API",
-      "status": "ORANGE",
-      "patients": ""
+      "status": "[Synthetic Data]",
+      "patients": "56/56"
     },
     {
       "source": "PNNL",
       "cohortStudy": "PROMETHEUS 8A",
       "description": "Proteomics",
       "type": "S3 Upload",
-      "status": "ORANGE",
-      "patients": ""
+      "status": "[Synthetic Data]",
+      "patients": "2/2"
     },
     {
       "source": "Ellison",
       "cohortStudy": "PROMETHEUS 8A",
       "description": "Metabolomics",
       "type": "S3 Upload",
-      "status": "ORANGE",
+      "status": "[Data Pending]",
       "patients": ""
     },
     {
@@ -86,7 +86,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "cohortStudy": "APOLLO 5",
       "description": "Images",
       "type": "API",
-      "status": "ORANGE",
+      "status": "[Data Pending]",
       "patients": ""
     },
     {
@@ -94,7 +94,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "cohortStudy": "VA-REPOP",
       "description": "Images",
       "type": "API",
-      "status": "GREEN",
+      "status": "[Established - Real Data]",
       "patients": "32/812"
     },
     {
@@ -102,7 +102,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "cohortStudy": "VA-REPOP",
       "description": "Longitudinal clinical, targeted sequencing",
       "type": "API",
-      "status": "GREEN",
+      "status": "[Established - Real Data]",
       "patients": "265/812"
     },
     {
@@ -110,15 +110,17 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "cohortStudy": "VABio/ APOLLO 5/ Prometheus 8A",
       "description": "Longitudinal clinical, targeted sequencing",
       "type": "API",
-      "status": "ORANGE",
+      "status": "[Data Pending]",
       "patients": ""
     }
   ];
   type BgColorsType = {[key: string]: string};
   const bgColors: BgColorsType = {
-    GREEN: 'bg-green-100',
-    ORANGE: 'bg-orange-100',
-    RED: 'bg-red-100',
+    '[Established - Real Data]': 'bg-green-100',
+    '[Established - Real Data Pending]': 'bg-orange-100',
+    '[Synthetic Data]': 'bg-orange-100',
+    '[Connection Pending]': 'bg-red-100',
+    '[Data Pending]': 'bg-red-100',
   };
   const rows = elements.map((element, index) => (
     <Table.Tr key={index}>
@@ -155,8 +157,8 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
           <Table.Tbody>{rows}</Table.Tbody>
         </Table>
         <p><Mark className={bgColors.GREEN}>Green color</Mark>: connection established with real data</p>
-        <p><Mark className={bgColors.ORANGE}>Orange color</Mark>: connection estabilished with test data</p>
-        <p><Mark className={bgColors.RED}>Red color</Mark>: connection not working/connection pending?</p>
+        <p><Mark className={bgColors.ORANGE}>Orange color</Mark>: connection established with synthetic data</p>
+        <p><Mark className={bgColors.RED}>Red color</Mark>: connection not working/connection pending/data pending</p>
       </div>
     </NavPageLayout>
   );

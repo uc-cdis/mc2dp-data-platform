@@ -41,7 +41,50 @@
             "gen3_discovery.subject_type_of_exposure",
             "gen3_discovery.subject_cancer_stage",
             "gen3_discovery.subject_cancer_grade"
-          ]
+          ],
+          "fieldsConfig" : {
+            "gen3_discovery.subject_primary_disease": {
+              "field": "gen3_discovery.subject_primary_disease",
+              "label": "Primary Disease",
+              "moveValuesToBottom": [
+                "no data"
+              ]
+            },
+            "gen3_discovery.subject_cancer_type": {
+              "field": "gen3_discovery.subject_cancer_type",
+              "label": "Cancer Type",
+              "moveValuesToBottom": [
+                "no data"
+              ]
+            },
+            "gen3_discovery.subject_metastasis": {
+              "field": "gen3_discovery.subject_metastasis",
+              "label": "Metastasis",
+              "moveValuesToBottom": [
+                "no data"
+              ]
+            },
+            "gen3_discovery.subject_type_of_exposure": {
+              "field": "gen3_discovery.subject_type_of_exposure",
+              "moveValuesToBottom": [
+                "no data"
+              ]
+            },
+            "gen3_discovery.subject_cancer_stage": {
+              "field": "gen3_discovery.subject_cancer_stage",
+              "label": "Cancer Stage",
+              "moveValuesToBottom": [
+                "no data"
+              ]
+            },
+            "gen3_discovery.subject_cancer_grade": {
+              "field": "gen3_discovery.subject_cancer_grade",
+              "label": "Cancer Grade",
+              "moveValuesToBottom": [
+                "no data"
+              ]
+            }
+          }
         }
       ]
     },
@@ -54,7 +97,7 @@
         "title": "Details"
       },
       "fields": [
-        "gen3_discovery.subject_id",
+        "gen3_discovery._unique_id",
         "gen3_discovery.is_synthetic",
         "gen3_discovery.subject_cancer_type",
         "gen3_discovery.subject_primary_disease",
@@ -66,7 +109,7 @@
         "gen3_discovery.commons_name"
       ],
       "columns": {
-        "gen3_discovery.subject_id": {
+        "gen3_discovery._unique_id": {
           "title": "MC2DP GLOBAL ID"
         },
         "gen3_discovery.is_synthetic": {
@@ -136,28 +179,8 @@
       "nodeCountTitle": "Subject",
       "fieldMapping": [
         {
-          "field": "gen3_discovery.subject_id",
+          "field": "gen3_discovery._unique_id",
           "name": "Subject ID"
-        },
-        {
-          "field": "gen3_discovery.subject_primary_disease",
-          "name": "Primary Disease"
-        },
-        {
-          "field": "gen3_discovery.subject_cancer_grade",
-          "name": "Cancer Grade"
-        },
-        {
-          "field": "gen3_discovery.subject_cancer_type",
-          "name": "Cancer Type"
-        },
-        {
-          "field": "gen3_discovery.subject_metastasis",
-          "name": "Metastasis"
-        },
-        {
-          "field": "gen3_discovery.subject_type_of_exposure",
-          "name": "Type of Exposure"
         }
       ],
       "manifestMapping": {
@@ -226,7 +249,7 @@
       "dataType": "metadata",
       "fieldMapping": [
         {
-          "field": "gen3_discovery.subject_id",
+          "field": "gen3_discovery.mc2dp_global_id",
           "name": "Subject ID"
         },
         {
@@ -254,28 +277,6 @@
       "downloadAccessor": "subject_id"
     },
     "buttons": [
-      {
-        "enabled": true,
-        "type": "data-json",
-        "title": "JSON",
-        "dropdownId": "download-table",
-        "leftIcon": "datafile",
-        "rightIcon": "download",
-        "actionArgs": {
-          "filename": "data_table.json"
-        }
-      },
-      {
-        "enabled": true,
-        "type": "data-tsv",
-        "title": "TSV",
-        "dropdownId": "download-table",
-        "leftIcon": "datafile",
-        "rightIcon": "download",
-        "actionArgs": {
-          "filename": "data_table.tsv"
-        }
-      },
       {
         "enabled": true,
         "type": "data-csv",

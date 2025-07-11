@@ -8,7 +8,7 @@
       "buttonLabel" : "Export",
       "actionFunction" : "export-from-discovery-to-workspace",
       "parameters" : {
-        "useAggMDS" : false
+        "useAggMDS" : true
       },
       "itemRules": [
         {

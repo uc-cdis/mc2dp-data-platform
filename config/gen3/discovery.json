@@ -3,7 +3,10 @@
     {
       "label": "Subjects",
       "tableConfig": {
-        "selectableRows": true,
+        "selectableRowConfiguration": {
+          "field": "data_files",
+          "comparer": "arrayNotEmpty"
+        },
         "expandableRows": true
       },
       "features": {
@@ -11,13 +14,15 @@
           "dataFetchFunction": "IndexedAggMDSAllLocal",
           "dataFetchArgs": {
             "indexKeys": [
+              "BloodPAC-subject-level-metadata",
               "VPODC-subject-level-metadata",
               "APOLLO-subject-level-metadata",
-              "BloodPAC-subject-level-metadata",
               "Proteomic-Data-Commons-subject-level-metadata",
               "VMOAT-subject-level-metadata",
               "Metabolomic-subject-level-metadata",
-              "TCIA-subject-level-metadata"
+              "TCIA-subject-level-metadata",
+              "Windber-subject-level-metadata",
+              "aggregated-subject-level-metadata"
             ]
           }
         },
@@ -65,7 +70,7 @@
               "subject_gender",
               "subject_race",
               "subject_ethnicity",
-              "gen3MDSGUID",
+              "_unique_id",
               "data_source"
             ]
           },
@@ -74,21 +79,21 @@
             "collapsibleButtonText": "Data Commons"
           }
         },
-        "exportFromDiscovery" : {
+        "exportFromDiscovery": {
           "enabled": "true",
-          "buttons" : [ {
-            "type" : "addToDataLibrary",
-            "requiresLogin" : "true"
-          }
+          "buttons": [
+            {
+              "type": "addToDataLibrary",
+              "requiresLogin": "true"
+            }
           ],
-          "exportDataFields" : {
-            "dataObjectField": "_manifest",
-            "datasetIdField": "gen3MDSGUID",
-            "dataObjectIdField": "object_id",
-            "dataObjectNameField" : "file_name",
-            "dataObjectSizeField" : "file_size",
+          "exportDataFields": {
+            "dataObjectField": "data_files",
+            "datasetIdField": "mc2dp_global_id",
+            "dataObjectIdField": "file_unique_identifier",
+            "dataObjectSizeField": "file_data_size",
             "dataObjectMd5SumField": "md5",
-            "dataObjectUrlField": "commons_url"
+            "dataObjectUrlField": "file_download_url"
           }
         },
         "authorization": {
@@ -116,29 +121,29 @@
         "chartsSection": {
           "title": "Charts",
           "enabled": true,
-          "showLegends" : {
-            "enabled" : true
+          "showLegends": {
+            "enabled": true
           },
           "charts": {
             "subject_primary_disease": {
               "chartType": "horizontalStacked",
               "title": "Primary Disease",
-              "showLegendInChart" : false
+              "showLegendInChart": false
             },
             "subject_type_of_exposure": {
               "chartType": "horizontalStacked",
               "title": "Type of Exposure",
-              "showLegendInChart" : false
+              "showLegendInChart": false
             },
             "subject_cancer_grade": {
               "chartType": "horizontalStacked",
               "title": "Cancer Stage",
-              "showLegendInChart" : false
+              "showLegendInChart": false
             },
             "subject_gender": {
               "chartType": "horizontalStacked",
               "title": "Biological Sex",
-              "showLegendInChart" : false
+              "showLegendInChart": false
             }
           }
         }
@@ -156,7 +161,7 @@
       "studyColumns": [
         {
           "name": "MC2DP Global ID",
-          "field": "gen3MDSGUID",
+          "field": "_unique_id",
           "errorIfNotAvailable": false,
           "valueIfNotAvailable": "not set",
           "contentType": "string",
@@ -233,6 +238,14 @@
           "errorIfNotAvailable": false,
           "valueIfNotAvailable": "API",
           "contentType": "string"
+        },
+        {
+          "name": "DATA",
+          "field": "data_files",
+          "errorIfNotAvailable": false,
+          "valueIfNotAvailable": "",
+          "cellRenderFunction": "HasData",
+          "contentType": "array"
         }
       ],
       "studyPreviewField": {
@@ -255,7 +268,7 @@
             "fields": [
               {
                 "name": "MC2DP Global ID",
-                "field": "subject_id",
+                "field": "_unique_id",
                 "contentType": "string"
               },
               {
@@ -335,7 +348,7 @@
       "minimalFieldMapping": {
         "tagsListFieldName": "tags",
         "authzField": "authz",
-        "uid": "gen3MDSGUID"
+        "uid": "_unique_id"
       },
       "tags": {
         "tagCategories": [
@@ -401,6 +414,7 @@
               "VPODC-study-level-metadata",
               "APOLLO-study-level-metadata",
               "Proteomic-Data-Commons-study-level-metadata",
+              "VMOAT-study-level-metadata",
               "Metabolomic-study-level-metadata",
               "TCIA-study-level-metadata"
             ]
@@ -447,6 +461,7 @@
               "full_name",
               "study_description",
               "study_id",
+              "_unique_id",
               "commons"
             ]
           },
@@ -556,6 +571,7 @@
           "valueIfNotAvailable": "API",
           "contentType": "string"
         }
+
       ],
       "studyPreviewField": {
         "name": "Description",

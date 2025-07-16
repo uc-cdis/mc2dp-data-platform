@@ -111,7 +111,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "description": "Longitudinal clinical, targeted sequencing",
       "type": "API",
       "status": "[Data Pending]",
-      "patients": ""
+      "patients": "106/106"
     }
   ];
   type BgColorsType = {[key: string]: string};

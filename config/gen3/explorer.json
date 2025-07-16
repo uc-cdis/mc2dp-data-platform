@@ -76,6 +76,13 @@
               "moveValuesToBottom": [
                 "no data"
               ]
+            },
+            "gen3_discovery.subject_cancer_grade": {
+              "field": "gen3_discovery.subject_cancer_grade",
+              "label": "Cancer Grade",
+              "moveValuesToBottom": [
+                "no data"
+              ]
             }
           }
         }

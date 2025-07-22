@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';A
 import { Title, Table, Mark } from '@mantine/core';
 import {
   NavPageLayout,
@@ -69,7 +69,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "source": "PNNL",
       "cohortStudy": "PROMETHEUS 8A",
       "description": "Proteomics",
-      "type": "CBDX*",
+      "type": "CBDX",
       "status": "[Synthetic Data]",
       "patients": "2/2"
     },
@@ -127,7 +127,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       <Table.Td>{element.source}</Table.Td>
       <Table.Td>{element.cohortStudy}</Table.Td>
       <Table.Td>{element.description}</Table.Td>
-      <Table.Td>{element.type}</Table.Td>
+      <Table.Td>{element.type}{element.type == "CBDX" ? <sup>*</sup> : ""}</Table.Td>
       <Table.Td className={bgColors[element.status]}>{element.status}</Table.Td>
       <Table.Td>{element.patients}</Table.Td>
     </Table.Tr>
@@ -159,7 +159,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
         <p><Mark className={bgColors['[Established - Real Data]']}>Green color</Mark>: connection established with real data</p>
         <p><Mark className={bgColors['[Synthetic Data]']}>Orange color</Mark>: connection established with synthetic data</p>
         <p><Mark className={bgColors['[Data Pending]']}>Red color</Mark>: connection not working/connection pending/data pending</p>
-        <p>* CBDX - Cloud Bucket Data Exchange</p>
+        <p><sup>*</sup>CBDX - Cloud Bucket Data Exchange</p>
       </div>
     </NavPageLayout>
   );

@@ -69,7 +69,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "source": "PNNL",
       "cohortStudy": "PROMETHEUS 8A",
       "description": "Proteomics",
-      "type": "S3 Upload",
+      "type": "CBDX*",
       "status": "[Synthetic Data]",
       "patients": "2/2"
     },
@@ -77,7 +77,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "source": "Ellison",
       "cohortStudy": "PROMETHEUS 8A",
       "description": "Metabolomics",
-      "type": "S3 Upload",
+      "type": "CBDX*",
       "status": "[Data Pending]",
       "patients": ""
     },
@@ -159,6 +159,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
         <p><Mark className={bgColors['[Established - Real Data]']}>Green color</Mark>: connection established with real data</p>
         <p><Mark className={bgColors['[Synthetic Data]']}>Orange color</Mark>: connection established with synthetic data</p>
         <p><Mark className={bgColors['[Data Pending]']}>Red color</Mark>: connection not working/connection pending/data pending</p>
+        <p>* CBDX - Cloud Bucket Data Exchange</p>
       </div>
     </NavPageLayout>
   );

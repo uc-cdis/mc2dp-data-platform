@@ -1,4 +1,4 @@
-import React from 'react';A
+import React from 'react';
 import { Title, Table, Mark } from '@mantine/core';
 import {
   NavPageLayout,

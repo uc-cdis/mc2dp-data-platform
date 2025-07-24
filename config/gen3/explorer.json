@@ -53,7 +53,7 @@
                 "GDC,VPODC,TCIA"
               ],
               "moveValuesToBottom": [
-                "no data"
+                "Metabolomics", "no data"
               ]
             },
             "gen3_discovery.subject_primary_disease": {

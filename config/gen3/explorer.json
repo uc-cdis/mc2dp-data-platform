@@ -13,7 +13,7 @@
           "title": "Primary Disease",
           "showLegendInChart" : false
         },
-        "gen3_discovery.subject_type_of_exposure": {
+        "gen3_discovery.subject_type_of_exposures.name": {
           "chartType": "horizontalStacked",
           "title": "Type of Exposure",
           "showLegendInChart" : false
@@ -39,7 +39,7 @@
             "gen3_discovery.subject_primary_disease",
             "gen3_discovery.subject_cancer_type",
             "gen3_discovery.subject_metastasis",
-            "gen3_discovery.subject_type_of_exposure",
+            "gen3_discovery.subject_type_of_exposures.name",
             "gen3_discovery.subject_cancer_stage",
             "gen3_discovery.subject_cancer_grade"
           ],
@@ -79,8 +79,8 @@
                 "no data"
               ]
             },
-            "gen3_discovery.subject_type_of_exposure": {
-              "field": "gen3_discovery.subject_type_of_exposure",
+            "gen3_discovery.subject_type_of_exposures.name": {
+              "field": "gen3_discovery.subject_type_of_exposures.name",
               "label": "Type of Exposure",
               "moveValuesToBottom": [
                 "no data"
@@ -186,7 +186,7 @@
                   },
                   {
                       "name": "Type of Exposure",
-                      "field": "subject_type_of_exposure",
+                      "field": "subject_type_of_exposures.name",
                       "contentType": "string"
                   }
               ]
@@ -201,7 +201,7 @@
         "gen3_discovery.subject_metastasis",
         "gen3_discovery.subject_cancer_grade",
         "gen3_discovery.subject_cancer_stage",
-        "gen3_discovery.subject_type_of_exposure",
+        "gen3_discovery.subject_type_of_exposures.name",
         "gen3_discovery.subject_gender",
         "gen3_discovery.subject_race",
         "gen3_discovery.subject_ethnicity",
@@ -230,8 +230,8 @@
         "gen3_discovery.subject_cancer_stage": {
           "title": "CANCER STAGE"
         },
-        "gen3_discovery.subject_type_of_exposure": {
-          "title": "TYPE OF EXPOSURE"
+        "gen3_discovery.subject_type_of_exposures.name": {
+          "title": "TYPE OF EXPOSURES"
         },
         "gen3_discovery.subject_gender": {
           "title": "BIOLOGICAL SEX"

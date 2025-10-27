@@ -1,6 +1,8 @@
 import App, { AppProps, AppContext, AppInitialProps } from 'next/app';
 import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { MantineProvider } from '@mantine/core';
+import { Faro, FaroErrorBoundary, withFaroProfiler } from '@grafana/faro-react';
+import { initGrafanaFaro } from '../lib/Grafana/grafana';
 import mantinetheme from '../mantineTheme';
 
 import {
@@ -8,10 +10,10 @@ import {
   type ModalsConfig,
   RegisteredIcons,
   SessionConfiguration,
-  registerCohortDiscoveryApp,
   registerExplorerDefaultCellRenderers,
   registerCohortBuilderDefaultPreviewRenderers,
   registerMetadataSchemaApp,
+  registerCohortDiscoveryApp,
 } from '@gen3/frontend';
 
 import { registerCohortTableCustomCellRenderers } from '@/lib/CohortBuilder/CustomCellRenderers';
@@ -50,8 +52,17 @@ const Gen3App = ({
   modalsConfig,
 }: AppProps & Gen3AppProps) => {
   const isFirstRender = useRef(true);
+  const faroRef = useRef<null | Faro>(null);
 
   useEffect(() => {
+    // one time init
+    // if (
+    //   process.env.NEXT_PUBLIC_FARO_COLLECTOR_URL &&
+    //   process.env.NEXT_PUBLIC_FARO_APP_ENVIRONMENT != "local" &&
+    //   !faroRef.current
+    // ) {
+
+    if (!faroRef.current) faroRef.current = initGrafanaFaro();
     if (isFirstRender.current) {
       setDRSHostnames(drsHostnames);
       registerDefaultRemoteSupport();
@@ -76,6 +87,7 @@ const Gen3App = ({
       {isClient ? (
         <Suspense fallback={<Loading />}>
           <DatadogInit />
+          <FaroErrorBoundary>
             <MantineProvider theme={mantinetheme}>
               <Gen3Provider
                 icons={icons}
@@ -85,6 +97,7 @@ const Gen3App = ({
                 <Component {...pageProps} />
               </Gen3Provider>
             </MantineProvider>
+          </FaroErrorBoundary>
         </Suspense>
       ) : (
         // Show some fallback UI while waiting for the client to load

@@ -1,5 +1,5 @@
 {
-  "name": "@gen3/commons-portal-app-base",
+  "name": "mc2dp-data-commons",
   "version": "0.11.59",
   "private": "true",
   "engines": {
@@ -25,6 +25,9 @@
     "@fontsource/source-sans-pro": "^5.2.5",
     "@gen3/core": "0.11.59",
     "@gen3/frontend": "0.11.59",
+    "@grafana/faro-react": "^1.9.1",
+    "@grafana/faro-web-sdk": "^1.9.1",
+    "@grafana/faro-web-tracing": "^1.9.1",
     "@mantine/core": "^7.17.8",
     "@mantine/dates": "^7.17.8",
     "@mantine/form": "^7.17.8",

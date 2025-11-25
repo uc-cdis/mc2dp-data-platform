@@ -1,29 +1,17 @@
 {
   "navigation": {
     "classNames": {
-      "root": "pl-1 mr-6 bg-base-max text-primary opacity-100 hover:opacity-100",
+      "root": "pl-1 mr-0.5 bg-base-max text-primary opacity-100 hover:opacity-100",
       "item": "py-2 px-4 hover:bg-base-lightest hover:text-base-contrast",
       "navigationPanel": "bg-base-max text-primary"
     },
     "logo": {
-      "src": "/icons/gen3-dark.svg",
-      "width": 120,
-      "height": 60,
+      "src": "/images/murtha_cancer_center_logo.jpg",
+      "height": 100,
+      "width": 100,
       "href": "/"
     },
     "items": [
-      {
-        "icon": "gen3:query",
-        "href": "/Discovery",
-        "name": "Discovery",
-        "tooltip": "Use free-text search and tags to rapidly find relevant studies."
-      },
-      {
-        "icon": "gen3:dictionary",
-        "href": "/DataDictionary",
-        "name": "Dictionary",
-        "tooltip": "The Data Dictionary serves to inform the data model and is updated as new data is ingested."
-      },
       {
         "icon": "gen3:exploration",
         "href": "/Explorer",
@@ -31,10 +19,15 @@
         "tooltip": "The Exploration Page enables discovery of the data at the subject level and features a cohort builder."
       },
       {
-        "icon": "gen3:query",
-        "href": "/Query",
-        "name": "Query",
-        "tooltip": "Query the databases using GraphiQL."
+        "icon": "gen3:mdd",
+        "href": "/app/MetadataDictionary",
+        "name": "Mesh Metadata",
+        "tooltip": "View the metadata data schemas."
+      },
+      {
+        "icon": "gen3:analysis",
+        "href": "/DataConnections",
+        "name": "Data Connections"
       },
       {
         "icon": "gen3:analysis",
@@ -43,9 +36,15 @@
         "tooltip": "Learn how to use Jupyter Notebooks to explore and visualize data available by running a tutorial notebook, or use one of these examples as a launching point for your own custom analysis."
       },
       {
-        "icon": "gen3:workspace",
-        "href": "/Workspace",
+        "icon": "gen3:list",
+        "href": "/DataLibrary",
+        "name": "Data Library",
+        "tooltip": "Create and manage lists of data"
+      },
+      {
         "name": "Workspace",
+        "href": "/Workspace",
+        "icon": "gen3:workspace",
         "tooltip": "Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources."
       },
       {
@@ -53,27 +52,22 @@
         "href": "/Profile",
         "name": "Profile",
         "tooltip": "Create API keys for programmatic data access, and review your authorization privileges to datasets and services."
-      },
-      {
-        "icon": "gen3:profile",
-        "href": "/DataLibrary",
-        "name": "Data Library",
-        "tooltip": "library of data"
       }
     ]
   },
   "topBar": {
     "items": [
       {
-        "rightIcon": "gen3:upload",
-        "href": "/Submission",
-        "name": "Browse Data"
+        "href": "https://uc-cdis.github.io/platform-citation/mc2dp-cite/",
+        "name": "Cite MC2DP",
+        "newWindow": true
       },
       {
-        "href": "https://docs.gen3.org/",
-        "name": "Documentation"
+        "href": "https://uc-cdis.github.io/mc2dp-docs/",
+        "name": "Documentation",
+        "newWindow": true
       }
     ],
-    "loginButtonVisibility": "visible"
+    "loginButtonVisibility": "hidden"
   }
 }

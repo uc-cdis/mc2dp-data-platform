@@ -3,11 +3,17 @@
     "/DataLibrary": {
       "loginRequired": true
     },
+    "/DataConnections": { "loginRequired": true },
+    "/Analysis": {
+      "loginRequired": true
+    },
     "/Workspace": {
-      "loginRequired": true,
-      "authz": ["/workspace"]
+      "loginRequired": true
     },
     "/Profile": {
+      "loginRequired": true
+    },
+    "/Explorer": {
       "loginRequired": true
     },
     "*": {

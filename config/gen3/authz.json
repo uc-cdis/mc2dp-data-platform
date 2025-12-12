@@ -9,6 +9,9 @@
     "/user": {
       "loginRequired": false
     },
+    "/lw-workspace": {
+      "loginRequired": false
+    },
     "*": {
       "loginRequired": true,
       "authz": ["/workspace"]

@@ -1,9 +1,14 @@
 {
   "routes": {
+    "/": {
+      "loginRequired": false
+    },
+    "/Login": { 
+      "loginRequired": false 
+    },
     "*": {
       "loginRequired": true,
-      "authz":
-      ["/workspace"]
+      "authz": ["/workspace"]
     }
   }
 }

@@ -117,7 +117,7 @@ export async function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    // Run on almost everything but skip Next.js internals and common assets
-    '/((?!_next/static|_next/image|_next/data|favicon.ico|.*\\.ico$|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.json$).*)',
+    // Run on almost everything but skip Next.js internals, common assets, Login page
+    '/((?!_next/static|_next/image|_next/data|Login|favicon.ico|.*\\.ico$|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.json$).*)',
   ],
 };

@@ -3,9 +3,6 @@
     "/": {
       "loginRequired": false
     },
-    "/Login": { 
-      "loginRequired": false 
-    },
     "*": {
       "loginRequired": true,
       "authz": ["/workspace"]

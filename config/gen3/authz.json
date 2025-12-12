@@ -1,11 +1,34 @@
 {
   "routes": {
-    "/": {
-      "loginRequired": false
-    },
-    "*": {
+    "/DataLibrary": {
       "loginRequired": true,
       "authz": ["/workspace"]
+    },
+    "/DataConnections": { 
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/Analysis": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/Workspace": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/Profile": {
+      "loginRequired": true
+    },
+    "/app/MetadataDictionary": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/Explorer": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "*": {
+      "loginRequired": false
     }
   }
 }

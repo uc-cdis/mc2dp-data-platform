@@ -6,6 +6,14 @@ import {
 
 const DEFAULT_TTL_SECONDS = 360;
 
+interface AuthzResourceData {
+  name: string;
+  path: string;
+  description: string;
+  subresources?: string[];
+}
+
+
 /**
  * Low-level helper to fetch Arborist resources for the current user.
  * Adds an Authorization header when a token is provided and normalizes the response
@@ -32,6 +40,11 @@ export async function fetchArboristResources(
       await res.text(),
     );
     return [];
+  }
+  // the resource response is different from the resources response
+  if (useService) {
+    const data = (await res.json()) as { resources: Array<AuthzResourceData> };
+    return data.resources.map((r) => r.path) ?? [];
   }
   const data = (await res.json()) as AuthzResourceResponse;
   return data.resources ?? [];

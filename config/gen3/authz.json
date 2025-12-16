@@ -17,7 +17,8 @@
       "authz": ["/workspace"]
     },
     "/Profile": {
-      "loginRequired": true
+      "loginRequired": true,
+      "authz": ["/workspace"]
     },
     "/app/MetadataDictionary": {
       "loginRequired": true,

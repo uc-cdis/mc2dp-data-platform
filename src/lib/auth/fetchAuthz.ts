@@ -33,6 +33,11 @@ export async function fetchArboristResources(
     ? `${GEN3_AUTHZ_SERVICE}/resource`
     : `${GEN3_AUTHZ_API}/resources`;
   const res = await fetch(url, { headers, next: { revalidate: revalidate } });
+
+  const resTest = await fetch(`${GEN3_AUTHZ_SERVICE}/resource`, { headers, next: { revalidate: revalidate } });
+  const resTest2 = await fetch(`${GEN3_AUTHZ_API}/resources`, { headers, next: { revalidate: revalidate } });
+  console.log('resTest', resTest);
+  console.log('resTest2', resTest2);
   if (!res.ok) {
     console.error(
       'commons:fetchArboristResources Arborist /resource failed:',

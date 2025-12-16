@@ -54,12 +54,10 @@ function isLoggedIn(loginStatus: LoginStatus) {
 }
 
 export async function middleware(req: NextRequest) {
-  console.log('middlewarerunnig', req);
   const pathname = req.nextUrl.pathname;
   const { routes: routeConfig } = await getRouteConfig();
   let rule = getRouteRuleForPath(pathname, routeConfig);
   // check if there is a wildcard route
-  console.log('middleware: route rule for', pathname, 'is', rule);
   if (!rule) {
     rule = getRouteRuleForPath('*', routeConfig);
   }
@@ -77,7 +75,6 @@ export async function middleware(req: NextRequest) {
   const loggedIn = await isLoggedIn(loginStatus);
 
   // 1) Enforce login if required
-  console.log('middleware: login required?', loginRequired, 'logged in?', loggedIn);
   if (loginRequired && !loggedIn) {
     const loginUrl = new URL('/Login', req.url);
     loginUrl.searchParams.set('referer', pathname);
@@ -85,7 +82,6 @@ export async function middleware(req: NextRequest) {
   }
 
   // If no authz resources configured, login is enough
-  console.log('middleware: authz required?', needsAuthz);
   if (!needsAuthz) {
     return NextResponse.next();
   }
@@ -93,7 +89,6 @@ export async function middleware(req: NextRequest) {
   // if authz is required but we somehow aren't logged in,
   // send to login (even though in practice loginRequired will almost
   // always be true when authz is configured).
-  console.log('middleware: authz required and user not logged in?', loggedIn);
   if (!loggedIn) {
     const loginUrl = new URL('/Login', req.url);
     loginUrl.searchParams.set('referer', pathname);
@@ -110,7 +105,6 @@ export async function middleware(req: NextRequest) {
   );
 
   const allowed = rule?.authz!.some((needed) => resources.includes(needed));
-  console.log('middleware: fetched Arborist resources:', resources, allowed, rule);
   if (!allowed) {
     // Already logged in if required; they just lack authz for this resource
     return NextResponse.redirect(new URL('/403', req.url));

@@ -105,7 +105,6 @@ export async function middleware(req: NextRequest) {
   );
 
   const allowed = rule?.authz!.some((needed) => resources.includes(needed));
-  console.log('middleware: fetched Arborist resources:', resources, allowed, rule);
   if (!allowed) {
     // Already logged in if required; they just lack authz for this resource
     return NextResponse.redirect(new URL('/403', req.url));

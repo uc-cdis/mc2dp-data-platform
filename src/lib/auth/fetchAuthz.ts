@@ -41,11 +41,6 @@ export async function fetchArboristResources(
     );
     return [];
   }
-  // the resource response is different from the resources response
-  if (useService) {
-    const data = (await res.json()) as { resources: Array<AuthzResourceData> };
-    return data.resources.map((r) => r.path) ?? [];
-  }
   const data = (await res.json()) as AuthzResourceResponse;
   return data.resources ?? [];
 }

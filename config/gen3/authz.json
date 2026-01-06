@@ -1,10 +1,6 @@
 {
   "routes": {
-    "/DataLibrary": {
-      "loginRequired": true,
-      "authz": ["/workspace"]
-    },
-    "/DataConnections": { 
+    "/AISearch": {
       "loginRequired": true,
       "authz": ["/workspace"]
     },
@@ -12,7 +8,31 @@
       "loginRequired": true,
       "authz": ["/workspace"]
     },
-    "/Workspace": {
+    "/Crosswalk": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/DataConnections": { 
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/DataDictionary": { 
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/DataLibrary": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/Explorer": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/no-workspace-access": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/notebook": {
       "loginRequired": true,
       "authz": ["/workspace"]
     },
@@ -20,11 +40,23 @@
       "loginRequired": true,
       "authz": ["/workspace"]
     },
-    "/app/MetadataDictionary": {
+    "/Query": {
       "loginRequired": true,
       "authz": ["/workspace"]
     },
-    "/Explorer": {
+    "/Submission": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/Workspace": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/app/CohortDiscovery": {
+      "loginRequired": true,
+      "authz": ["/workspace"]
+    },
+    "/app/MetadataDictionary": {
       "loginRequired": true,
       "authz": ["/workspace"]
     },

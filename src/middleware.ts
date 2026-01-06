@@ -99,10 +99,8 @@ export async function middleware(req: NextRequest) {
   const tokenFromCookie =
     getAccessToken(req.headers.get('Cookie') || '') ?? null;
 
-  // Let the server-side helper resolve resources using the active Gen3 session.
-  const cookieHeader = req.headers.get('Cookie') || undefined;
   const resources = await fetchArboristResources(
-    cookieHeader,
+    tokenFromCookie,
     process.env.NODE_ENV === 'production',
   );
 
@@ -117,7 +115,7 @@ export async function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    // Run on almost everything but skip Next.js internals and common assets
-    '/((?!_next/static|_next/image|_next/data|favicon.ico|.*\\.ico$|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.json$).*)',
+    // Run on almost everything but skip Next.js internals, common assets, Login page
+    '/((?!_next/static|_next/image|_next/data|Login|favicon.ico|.*\\.ico$|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.json$).*)',
   ],
 };

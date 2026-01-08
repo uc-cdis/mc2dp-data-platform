@@ -6,14 +6,6 @@ import {
 
 const DEFAULT_TTL_SECONDS = 360;
 
-interface AuthzResourceData {
-  name: string;
-  path: string;
-  description: string;
-  subresources?: string[];
-}
-
-
 /**
  * Low-level helper to fetch Arborist resources for the current user.
  * Adds an Authorization header when a token is provided and normalizes the response

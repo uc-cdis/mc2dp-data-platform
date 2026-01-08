@@ -12,11 +12,11 @@
       "loginRequired": true,
       "authz": ["/workspace"]
     },
-    "/DataConnections": { 
+    "/DataConnections": {
       "loginRequired": true,
       "authz": ["/workspace"]
     },
-    "/DataDictionary": { 
+    "/DataDictionary": {
       "loginRequired": true,
       "authz": ["/workspace"]
     },

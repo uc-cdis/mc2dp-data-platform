@@ -4,29 +4,29 @@
     "chartsSection": {
       "title": "Charts",
       "enabled": true,
-      "showLegends" : {
-        "enabled" : true
+      "showLegends": {
+        "enabled": true
       },
       "charts": {
         "gen3_discovery.subject_primary_disease": {
           "chartType": "horizontalStacked",
           "title": "Primary Disease",
-          "showLegendInChart" : false
+          "showLegendInChart": false
         },
         "gen3_discovery.subject_type_of_exposures": {
           "chartType": "horizontalStacked",
           "title": "Type of Exposure",
-          "showLegendInChart" : false
+          "showLegendInChart": false
         },
         "gen3_discovery.subject_cancer_stage": {
           "chartType": "horizontalStacked",
           "title": "Cancer Stage",
-          "showLegendInChart" : false
+          "showLegendInChart": false
         },
         "gen3_discovery.subject_gender": {
           "chartType": "horizontalStacked",
           "title": "Biological Sex",
-          "showLegendInChart" : false
+          "showLegendInChart": false
         }
       }
     },
@@ -44,7 +44,7 @@
             "gen3_discovery.subject_cancer_stage",
             "gen3_discovery.subject_cancer_grade"
           ],
-          "fieldsConfig" : {
+          "fieldsConfig": {
             "gen3_discovery.data_source": {
               "field": "gen3_discovery.data_source",
               "label": "Data Source",
@@ -57,51 +57,37 @@
             "gen3_discovery.is_data_files": {
               "field": "gen3_discovery.is_data_files",
               "label": "Has data files",
-              "moveValuesToBottom": [
-                "False"
-              ]
+              "moveValuesToBottom": ["False"]
             },
             "gen3_discovery.subject_primary_disease": {
               "field": "gen3_discovery.subject_primary_disease",
               "label": "Primary Disease",
-              "moveValuesToBottom": [
-                "no data"
-              ]
+              "moveValuesToBottom": ["no data"]
             },
             "gen3_discovery.subject_cancer_type": {
               "field": "gen3_discovery.subject_cancer_type",
               "label": "Cancer Type",
-              "moveValuesToBottom": [
-                "no data"
-              ]
+              "moveValuesToBottom": ["no data"]
             },
             "gen3_discovery.subject_metastasis": {
               "field": "gen3_discovery.subject_metastasis",
               "label": "Metastasis",
-              "moveValuesToBottom": [
-                "no data"
-              ]
+              "moveValuesToBottom": ["no data"]
             },
             "gen3_discovery.subject_type_of_exposures": {
               "field": "gen3_discovery.subject_type_of_exposures",
               "label": "Type of Exposure",
-              "moveValuesToBottom": [
-                "no data"
-              ]
+              "moveValuesToBottom": ["no data"]
             },
             "gen3_discovery.subject_cancer_stage": {
               "field": "gen3_discovery.subject_cancer_stage",
               "label": "Cancer Stage",
-              "moveValuesToBottom": [
-                "no data"
-              ]
+              "moveValuesToBottom": ["no data"]
             },
             "gen3_discovery.subject_cancer_grade": {
               "field": "gen3_discovery.subject_cancer_grade",
               "label": "Cancer Grade",
-              "moveValuesToBottom": [
-                "Unknown", "no data"
-              ]
+              "moveValuesToBottom": ["Unknown", "no data"]
             }
           }
         }
@@ -111,7 +97,7 @@
       "enabled": true,
       "detailsConfig": {
         "panel": "queryRowDetails",
-        "panelContainer" : "drawer",
+        "panelContainer": "drawer",
         "mode": "click",
         "idField": "gen3_discovery.mc2dp_global_id",
         "title": "Details",
@@ -122,76 +108,76 @@
               "groupWidth": "full",
               "includeName": false,
               "fields": [
-                  {
-                      "name": "MC2DP Global ID",
-                      "field": "mc2dp_global_id",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Data Source ID",
-                      "field": "subject_id_list",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Related Project",
-                      "field": "data_source_project",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Data Source",
-                      "field": "data_source",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Synthetic Data",
-                      "field": "is_synthetic",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Race",
-                      "field": "subject_race",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Biological Sex",
-                      "field": "subject_gender",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Ethnicity",
-                      "field": "subject_ethnicity",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Primary Disease",
-                      "field": "subject_primary_disease",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Cancer Type",
-                      "field": "subject_cancer_type",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Metastasis",
-                      "field": "subject_metastasis",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Cancer Grade",
-                      "field": "subject_cancer_grade",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Cancer Stage",
-                      "field": "subject_cancer_stage",
-                      "contentType": "string"
-                  },
-                  {
-                      "name": "Type of Exposure",
-                      "field": "subject_type_of_exposures",
-                      "contentType": "string"
-                  }
+                {
+                  "name": "MC2DP Global ID",
+                  "field": "mc2dp_global_id",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Data Source ID",
+                  "field": "subject_id_list",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Related Project",
+                  "field": "data_source_project",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Data Source",
+                  "field": "data_source",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Synthetic Data",
+                  "field": "is_synthetic",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Race",
+                  "field": "subject_race",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Biological Sex",
+                  "field": "subject_gender",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Ethnicity",
+                  "field": "subject_ethnicity",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Primary Disease",
+                  "field": "subject_primary_disease",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Cancer Type",
+                  "field": "subject_cancer_type",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Metastasis",
+                  "field": "subject_metastasis",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Cancer Grade",
+                  "field": "subject_cancer_grade",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Cancer Stage",
+                  "field": "subject_cancer_stage",
+                  "contentType": "string"
+                },
+                {
+                  "name": "Type of Exposure",
+                  "field": "subject_type_of_exposures",
+                  "contentType": "string"
+                }
               ]
             }
           ]
@@ -290,6 +276,45 @@
         ]
       }
     },
+    "buttons": [
+      {
+        "enabled": true,
+        "type": "cohortDataFilesToDataLibrary",
+        "title": "Add Cohort Files To DataLibrary List",
+        "tooltip": "Add all files in the cohort to a DataLibrary list.",
+        "leftIcon": "datafile",
+        "actionArgs": {
+          "dataPath": "gen3_discovery.data_files",
+          "fileIndex": "metadata",
+          "cohortIndex": "metadata",
+          "datasetIdField": "dataset_id",
+          "fileIdField": "file_unique_identifier",
+          "fileFields": [
+            "gen3_discovery.data_files.file_data_size",
+            "gen3_discovery.data_files.file_data_source",
+            "gen3_discovery.data_files.file_data_source_id",
+            "gen3_discovery.data_files.file_data_source_project",
+            "gen3_discovery.data_files.file_data_type",
+            "gen3_discovery.data_files.file_download_url",
+            "gen3_discovery.data_files.file_number_of_files",
+            "gen3_discovery.data_files.file_permission",
+            "gen3_discovery.data_files.file_subtype",
+            "gen3_discovery.data_files.file_unique_identifier",
+            "gen3_discovery.data_files.mc2dp_global_id"
+          ],
+          "libraryDataItemMapping": {
+            "size": "file_data_size",
+            "file_type": "file_data_type",
+            "name": "file_data_source",
+            "dataset_guid": "mc2dp_global_id",
+            "dataset_id": "mc2dp_global_id",
+            "url": "file_download_url",
+            "id": "file_unique_identifier",
+            "guid": "file_unique_identifier"
+          }
+        }
+      }
+    ],
     "loginForDownload": false,
     "guppyConfig": {
       "dataType": "metadata",

@@ -30,8 +30,8 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "cohortStudy": "APOLLO OV",
       "description": "Genomics",
       "type": "API",
-      "status": "[Established - Real Data Pending]",
-      "patients": "0/70"
+      "status": "[Established - Real Data]",
+      "patients": "70/70"
     },
     {
       "source": "PDC",
@@ -47,15 +47,15 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "description": "Clinical Metadata",
       "type": "API",
       "status": "[Synthetic Data]",
-      "patients": "56/56"
+      "patients": "175/175"
     },
     {
       "source": "Windber",
       "cohortStudy": "APOLLO 5",
       "description": "Clinical Detailed",
       "type": "API",
-      "status": "[Connection Pending]",
-      "patients": "0/56"
+      "status": "[Synthetic Data]",
+      "patients": "58/175"
     },
     {
       "source": "Windber",

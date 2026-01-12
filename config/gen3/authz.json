@@ -2,31 +2,31 @@
   "routes": {
     "/AISearch": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-aisearch"]
     },
     "/Analysis": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-analysis"]
     },
     "/Crosswalk": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-crosswalk"]
     },
     "/DataConnections": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-dataconnections"]
     },
     "/DataDictionary": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-datadictionary"]
     },
     "/DataLibrary": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-datalibrary"]
     },
     "/Explorer": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-explorer"]
     },
     "/no-workspace-access": {
       "loginRequired": true,
@@ -38,27 +38,27 @@
     },
     "/Profile": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-profile"]
     },
     "/Query": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-query"]
     },
     "/Submission": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-submission"]
     },
     "/Workspace": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-workspace"]
     },
     "/app/CohortDiscovery": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-cohortdiscovery"]
     },
     "/app/MetadataDictionary": {
       "loginRequired": true,
-      "authz": ["/workspace"]
+      "authz": ["/pages/see-metadatadictionary"]
     },
     "*": {
       "loginRequired": false

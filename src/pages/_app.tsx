@@ -79,6 +79,10 @@ const Gen3App = ({
     setIsClient(true); // Only on client-side
   }, []);
 
+
+  useEffect(() => {
+    setIsClient(true); // Only on client-side
+  }, []);
   return (
     <React.Fragment>
       {isClient ? (

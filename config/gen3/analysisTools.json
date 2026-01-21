@@ -1,5 +1,23 @@
 {
   "tools": [
+    {"title": "Metastasis free survival prediction using transcriptomics and proteomics data from the APOLLO-LUAD study",
+      "type": "notebook",
+      "icon": "/images/apps/icons/jupyter.png",
+      "image": "/images/apps/apollo_luad.png",
+      "description": "Based on multimodal cancer modeling described here https://arxiv.org/abs/2505.07683 this analysis fits a CoxPH model on zero-shot embeddings extracted from survival protein and survival RNA expression.",
+      "loginRequired": false,
+      "href": "/staticNotebook/protein_rna_embeddings_api.html",
+      "btnText": "Show Analysis"
+    },
+    {"title": "Multimodal Cancer Modeling in the Age of Foundation Model Embeddings",
+      "type": "notebook",
+      "icon": "/images/apps/icons/jupyter.png",
+      "image": "/images/apps/mm-cancer-demo.png",
+      "description": "Investigate the ability to train classical machine learning models over multimodal, zero-shot FM embeddings of cancer data. https://arxiv.org/abs/2505.07683",
+      "loginRequired": false,
+      "href": "/staticNotebook/mm-cancer-demo.html",
+      "btnText": "Show Analysis"
+    },
     {"title": "Cross-Commons Radiogenomic Integration Notebook",
       "type": "notebook",
       "icon": "/images/apps/icons/jupyter.png",

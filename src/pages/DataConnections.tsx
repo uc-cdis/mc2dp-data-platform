@@ -100,18 +100,18 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
     {
       "source": "VPODC",
       "cohortStudy": "VA-REPOP",
-      "description": "Longitudinal clinical, targeted sequencing",
+      "description": "Longitudinal clinical, targeted sequencing, Imaging",
       "type": "API",
       "status": "[Established - Real Data]",
-      "patients": "265/812"
+      "patients": "819/819 Imaging data for 10 patients received"
     },
     {
       "source": "VPODC",
       "cohortStudy": "VABio/ APOLLO 5/ Prometheus 8A",
-      "description": "Longitudinal clinical, targeted sequencing",
+      "description": "Longitudinal clinical, targeted sequencing, Imaging",
       "type": "API",
-      "status": "[Data Pending]",
-      "patients": "106/106"
+      "status": "[No Clinical Data, Imaging Data Received - Connection Pending]",
+      "patients": "Imaging data for 24 patients"
     }
   ];
   type BgColorsType = {[key: string]: string};
@@ -121,6 +121,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
     '[Synthetic Data]': 'bg-orange-100',
     '[Connection Pending]': 'bg-red-100',
     '[Data Pending]': 'bg-red-100',
+    '[No Clinical Data, Imaging Data Received - Connection Pending]': 'bg-red-100',
   };
   const rows = elements.map((element, index) => (
     <Table.Tr key={index}>

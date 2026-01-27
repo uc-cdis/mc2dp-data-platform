@@ -95,7 +95,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "description": "Images",
       "type": "API",
       "status": "[Established - Real Data]",
-      "patients": "32/812"
+      "patients": "32/819"
     },
     {
       "source": "VPODC",
@@ -111,7 +111,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "description": "Longitudinal clinical, targeted sequencing, Imaging",
       "type": "API",
       "status": "[No Clinical Data, Imaging Data Received - Connection Pending]",
-      "patients": "Imaging data for 24 patients"
+      "patients": "0/1878 Imaging data for 24 patients"
     }
   ];
   type BgColorsType = {[key: string]: string};

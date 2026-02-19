@@ -1,5 +1,5 @@
 {
-  "name": "@gen3/commons-portal-app-base",
+  "name": "mc2dp-data-commons",
   "version": "0.12.22",
   "private": "true",
   "engines": {
@@ -62,7 +62,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
-    "@types/lodash": "^4.14.202",
+    "@types/lodash": "^4.17.20",
     "@types/mdx": "^2.0.13",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",

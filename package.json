@@ -1,5 +1,5 @@
 {
-  "name": "@gen3/commons-portal-app-base",
+  "name": "mc2dp-data-commons",
   "version": "0.12.27",
   "private": "true",
   "engines": {

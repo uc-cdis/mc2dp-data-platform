@@ -8,6 +8,10 @@
       "loginRequired": true,
       "authz": ["/pages/see-analysis"]
     },
+    "/staticNotebook/(.*)": {
+      "loginRequired": true,
+      "authz": ["/pages/see-analysis"]
+    },
     "/Crosswalk": {
       "loginRequired": true,
       "authz": ["/pages/see-crosswalk"]

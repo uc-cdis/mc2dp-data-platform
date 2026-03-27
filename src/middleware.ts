@@ -6,6 +6,7 @@ export const config = {
   matcher: [
   "/AISearch",
   "/Analysis",
+  "/staticNotebook/(.*)",
   "/Crosswalk",
   "/DataConnections",
   "/DataDictionary",

@@ -12,19 +12,7 @@
   "bottomContent": [
     {
       "type": "markdown",
-      "text": "*If you have already requested access, please choose one of the above login options:* \n * **Google or Microsoft:** If your account is enabled for Google or Microsoft, you can log in directly using either service \n * **InCommons:** If your organization is part of the InCommon Federation, users can access the portal by selecting their institution from the provider list \n * **ORCID:** If you have an ORCID ID, you can log in using it. Please ensure you provide your ORCID ID to the MC2DP admin ahead of time so access can be granted"
-    },
-    {
-      "type": "markdown",
-      "text": "For more information, please visit our [Documentation Page](https://phoenixai.uchicago.edu/#)."
-    },
-    {
-      "type": "markdown",
-      "text": "*To request access, please [click here](https://forms.gle/gHkKB2HzpBhUbymS6).*"
-    },
-    {
-      "type": "markdown",
-      "text": "If you have questions about access or the registration process, contact us at [mc2dp@occ-data.org](mailto:mc2dp@occ-data.org)."
+      "text": "*If you have already requested access, please choose one of the above login options:* \n * **Google or Microsoft:** If your account is enabled for Google or Microsoft, you can log in directly using either service \n * **InCommons:** If your organization is part of the InCommon Federation, users can access the portal by selecting their institution from the provider list \n * **ORCID:** If you have an ORCID ID, you can log in using it. Please ensure you provide your ORCID ID to the MC2DP admin ahead of time so access can be granted  \n \n For more information, please visit our [Documentation Page](https://uc-cdis.github.io/mc2dp-docs/)  \n To request access, please [click here](https://forms.gle/gHkKB2HzpBhUbymS6).  \n \n If you have questions about access or the registration process, contact us at [mc2dp@occ-data.org](mailto:mc2dp@occ-data.org)."
     }
   ],
   "image": "images/gene_side_texture.svg",

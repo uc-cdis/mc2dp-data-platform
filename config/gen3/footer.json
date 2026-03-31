@@ -1,6 +1,6 @@
 {
   "classNames": {
-    "root": "bg-base-darker",
+    "root": "bg-base-darkest",
     "layout": "flex items-center justify-end"
   },
   "rightSection": {
@@ -27,6 +27,18 @@
               "height": 60,
               "description": "Center for Translational Data Science at the University of Chicago",
               "href": "https://ctds.uchicago.edu/"
+            }
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "Icon": {
+              "logo": "/icons/OCC.png",
+              "width": 150,
+              "height": 60,
+              "description": "OCC"
             }
           }
         ]

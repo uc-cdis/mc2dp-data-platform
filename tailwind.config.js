@@ -183,8 +183,6 @@ module.exports = {
     'text-xxs',
     'text-xxxs',
     'h-20',
-    'mt-10',
-    'mb-10',
     {
       pattern:
         /bg-(primary|secondary|accent|accent-warm|accent-cool|base)-(min|lightest|lighter|light|dark|darker|darkest|max)/,

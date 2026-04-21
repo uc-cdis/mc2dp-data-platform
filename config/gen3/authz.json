@@ -29,7 +29,7 @@
       "authz": ["/pages/see-datalibrary"]
     },
     "/Explorer": {
-      "loginRequired": true,
+      "loginRequired": true
     },
     "/notebook": {
       "loginRequired": true,

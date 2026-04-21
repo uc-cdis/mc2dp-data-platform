@@ -30,7 +30,6 @@
     },
     "/Explorer": {
       "loginRequired": true,
-      "authz": ["/pages/see-explorer"]
     },
     "/notebook": {
       "loginRequired": true,

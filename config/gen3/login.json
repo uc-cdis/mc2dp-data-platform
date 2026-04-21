@@ -1,20 +1,25 @@
 {
   "topContent": [
     {
-      "text": "MC2DP",
+      "text": "Murtha Cancer Center Data Platform",
       "className": "text-center text-3xl font-bold"
     },
     {
       "text": "DISCOVER, ANALYZE, AND SHARE DATA",
       "className": "text-center text-xl font-medium"
+    },
+    {
+      "type": "markdown",
+      "text": "**Already have access?**  \n \n Please choose one of the following login options: \n * Sign in with Google or Microsoft if your MC2DP access is linked to it. \n * Sign in via InCommon if your organization is part of the InCommon Federation. \n * Sign in with ORCID if you have an ORCID ID; please provide it to the MC2DP admin beforehand."
     }
   ],
   "bottomContent": [
     {
       "type": "markdown",
-      "text": "*If you have already requested access, please choose one of the above login options:* \n * **Google or Microsoft:** If your account is enabled for Google or Microsoft, you can log in directly using either service \n * **InCommons:** If your organization is part of the InCommon Federation, users can access the portal by selecting their institution from the provider list \n * **ORCID:** If you have an ORCID ID, you can log in using it. Please ensure you provide your ORCID ID to the MC2DP admin ahead of time so access can be granted  \n \n For more information, please visit our [Documentation Page](https://uc-cdis.github.io/mc2dp-docs/)  \n To request access, please [click here](https://forms.gle/gHkKB2HzpBhUbymS6).  \n \n If you have questions about access or the registration process, contact us at [mc2dp@occ-data.org](mailto:mc2dp@occ-data.org)."
+      "text": "**Need Access?**  \n \n Submit a request by filling out form, and our team will review it. You will be notified via email once your access is approved. [Request access to MC2DP](https://forms.gle/gHkKB2HzpBhUbymS6)  \n \n For details, see our [Documentation Page](https://uc-cdis.github.io/mc2dp-docs/). Questions? Email [mc2dp@occ-data.org](mailto:mc2dp@occ-data.org)."
     }
   ],
   "image": "images/gene_side_texture.svg",
+  "loginBtnHorizontal" : true,
   "showCredentialsLogin" : true
 }

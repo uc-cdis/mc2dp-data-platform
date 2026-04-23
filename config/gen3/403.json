@@ -1,0 +1,21 @@
+{
+  "topIcon": {
+    "src": "/icons/iconoir_window-no-access.svg",
+    "alt": "No access"
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "text": [
+        "# You don't have access to the portal yet", 
+        "You're logged in but don't have permission to use the portal. You can request access to Exploration, Mesh data, Data connections, Analysis, Data library, and Profile.",
+        "Workspace is not included in this request.  \n If you believe this is an error, contact your  \n platform administrator at [mc2dp@occ-data.org](mailto:mc2dp@occ-data.org)."],
+      "className": "text-center"
+    }
+  ],
+  "button": {
+    "href": "https://forms.gle/gHkKB2HzpBhUbymS6",
+    "text": "Request Access",
+    "variant": "outline"
+  }
+}

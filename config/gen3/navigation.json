@@ -18,7 +18,11 @@
         "icon": "gen3:exploration",
         "href": "/Explorer",
         "name": "Exploration",
-        "tooltip": "The Exploration Page enables discovery of the data at the subject level and features a cohort builder."
+        "tooltip": {
+          "loginRequired": "You don't have access to this section. Please log in.",
+          "unauthorized": "You don't have access to this section. Please request access.",
+          "authorized": "The Exploration Page enables discovery of the data at the subject level and features a cohort builder."
+        }
       },
       {
         "icon": "gen3:mdd",
@@ -48,7 +52,10 @@
         "name": "Workspace",
         "href": "/Workspace",
         "icon": "gen3:workspace",
-        "tooltip": "Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources."
+        "tooltip": {
+          "unauthorized": "You don't have access to Workspace. Please make a request to apply for access.",
+          "authorized": "Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources."
+        }
       },
       {
         "icon": "gen3:profile",

@@ -47,7 +47,7 @@
       "loginRequired": true,
       "authz": ["/pages/see-submission"]
     },
-    "/Workspace": {
+    "/Workspaces": {
       "loginRequired": true,
       "authz": ["/pages/see-workspace"]
     },

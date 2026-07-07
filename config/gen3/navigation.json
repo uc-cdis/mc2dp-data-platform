@@ -49,8 +49,8 @@
         "tooltip": "Create and manage lists of data"
       },
       {
-        "name": "Workspace",
-        "href": "/Workspace",
+        "name": "Workspaces",
+        "href": "/Workspaces",
         "icon": "gen3:workspace",
         "tooltip": {
           "unauthorized": "You don't have access to Workspace. Please make a request to apply for access.",

@@ -26,5 +26,13 @@
         "description": "Running via Remote Kernels (Paid Tier)"
       }
     }
+  },
+  "tierConfiguration": {
+    "free": {
+      "width": 400
+    },
+    "remote": {
+      "width": 300
+    }
   }
 }

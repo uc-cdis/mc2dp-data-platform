@@ -112,6 +112,14 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       "type": "API",
       "status": "[No Clinical Data, Imaging Data Received - Connection Pending]",
       "patients": "0/1878 Imaging data for 24 patients"
+    },
+    {
+      "source": "RCC",
+      "cohortStudy": "Cohort F",
+      "description": "Conduct analysis of collaborative workspaces on RCC pilot (pre-publication study)",
+      "type": "Collaborative workspace (VPODC/MC2DP)",
+      "status": "[Data Mounted on Collaborative Workspace]",
+      "patients": "23/23"
     }
   ];
   type BgColorsType = {[key: string]: string};

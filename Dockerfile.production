@@ -1,8 +1,5 @@
 # docker build -t ff .
 # docker run -p 3000:3000 -it ff
-# Multiplatform build:
-#   docker buildx build --platform linux/amd64,linux/arm64 -t ff --push .
-# Build stage runs on host platform for speed; runner stage targets TARGETPLATFORM
 FROM --platform=$BUILDPLATFORM node:24.15.0-trixie-slim AS builder
 
 ARG TARGETPLATFORM
@@ -48,7 +45,6 @@ RUN npm run build:jupyterlite
 # Build
 RUN npm run build
 
-# Production stage — explicitly targets TARGETPLATFORM for multiplatform support
 FROM node:24.15.0-trixie-slim AS runner
 
 WORKDIR /gen3

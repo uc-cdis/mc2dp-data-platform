@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, Table, Mark } from '@mantine/core';
+import { Title, Table, Mark, Spoiler } from '@mantine/core';
 import {
   NavPageLayout,
   NavPageLayoutProps,
@@ -150,7 +150,16 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
       <Table.Td>{element.source}</Table.Td>
       <Table.Td>{element.cohortStudy}</Table.Td>
       <Table.Td>{element.datatype}</Table.Td>
-      <Table.Td>{element.description}</Table.Td>
+      <Table.Td>
+        <Spoiler 
+          maxHeight={90}
+          showLabel="Show full description"
+          hideLabel="Hide full description"
+          className='w-96'
+        >
+          {element.description}
+        </Spoiler>
+      </Table.Td>
       <Table.Td>{element.type}{element.type == "CBDX" ? <sup>*</sup> : ""}</Table.Td>
       <Table.Td className={bgColors[element.status]}>{element.status}</Table.Td>
       <Table.Td>{element.patients}</Table.Td>
@@ -167,7 +176,12 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
     >
       <div className="w-full m-10">
         <Title order={1}>Data Connections</Title>
-        <Table striped tabularNums withTableBorder withColumnBorders>
+        <Table 
+          striped
+          tabularNums
+          withTableBorder
+          withColumnBorders
+        >
           <Table.Thead>
             <Table.Tr>
               <Table.Th>Source</Table.Th>
@@ -184,7 +198,7 @@ const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
         <p><Mark className={bgColors['[Established - Real Data]']}>Green color</Mark>: connection established with real data</p>
         <p><Mark className={bgColors['[Synthetic Data]']}>Orange color</Mark>: connection established with synthetic data</p>
         <p><Mark className={bgColors['[Data Pending]']}>Red color</Mark>: connection not working/connection pending/data pending</p>
-        <p><Mark className={bgColors['[No Clinical Data, Imaging Data Received - Connection Pending]']}>Red color</Mark>: connection not working/connection pending/data pending</p>
+        <p><Mark className={bgColors['[No Clinical Data, Imaging Data Received - Connection Pending]']}>Red color</Mark>: No Clinical Data/Imaging Data Received - Connection Pending</p>
         <p><sup>*</sup>CBDX - Cloud Bucket Data Exchange</p>
       </div>
     </NavPageLayout>

@@ -2,6 +2,7 @@
   "requirePayModel": false,
   "requestAccessForm": {
     "enabled": true,
+    "onPage":["/Workspaces"],
     "remoteSupportService": {
       "service": "zenDesk",
       "configuration": {

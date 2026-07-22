@@ -1,7 +1,14 @@
-import {
-  WorkspacePage,
-  WorkspacePageGetServerSideProps as getServerSideProps,
-} from '@gen3/frontend';
-export default WorkspacePage;
+import { GetServerSideProps } from 'next';
 
-export { getServerSideProps };
+export default function OldPage() {
+  return null;
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/Workspaces',
+      permanent: true, // true forces a 308/301 permanent status
+    },
+  };
+};

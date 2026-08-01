@@ -13,7 +13,8 @@ const basePath = process.env.NEXT_PUBLIC_BASEPATH;
 
 dns.setDefaultResultOrder('ipv4first');
 
-const isDev = process.env.NODE_ENV === 'development';
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+require('./src/lib/plugins/index.js');
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const withMDX = require('@next/mdx')({
@@ -23,6 +24,8 @@ const withMDX = require('@next/mdx')({
     rehypePlugins: [],
   },
 });
+
+const isDev = process.env.NODE_ENV === 'development';
 
 // Next configuration with support for writing API to existing common services
 /** @type {import('next').NextConfig} */
@@ -57,23 +60,10 @@ const nextConfig = {
     return config;
   },
   async rewrites() {
-    const workspaceApiRewrite = [
-      {
-        source: '/workspace-api/:path*',
-        destination: '/api/:path*',
-      },
-      {
-        source:
-          '/lw-workspace/proxy/jeg-proxy/kernelspecs/python_tf_kubernetes/logo-64x64.png',
-        destination: '/icons/kernels/logo-64.png',
-      },
-    ];
     if (isDev) {
       const GEN3_TARGET =
         process.env.NEXT_PUBLIC_GEN3_API_TARGET || 'https://localhost';
-
       return [
-        ...workspaceApiRewrite,
         { source: '/_status', destination: `${GEN3_TARGET}/_status` },
         { source: '/user/:path*', destination: `${GEN3_TARGET}/user/:path*` },
         {
@@ -102,7 +92,7 @@ const nextConfig = {
           source: '/library/lists/:path*',
           destination: `${GEN3_TARGET}/library/lists/:path*`,
         },
-        { source: '/job/:path*', destination: `${GEN3_TARGET}/job/:path*` },
+        { source: '/jobs/:path*', destination: `${GEN3_TARGET}/jobs/:path*` },
         {
           source: '/manifests/:path*',
           destination: `${GEN3_TARGET}/manifests/:path*`,
@@ -121,7 +111,7 @@ const nextConfig = {
         },
       ];
     } else {
-      return workspaceApiRewrite;
+      return [];
     }
   },
   async headers() {

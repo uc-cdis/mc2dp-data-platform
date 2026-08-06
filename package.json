@@ -3,8 +3,8 @@
   "version": "0.12.54",
   "private": "true",
   "engines": {
-    "npm": ">=11.9.0",
-    "node": ">=24.15.0"
+    "npm": ">=11.16.0",
+    "node": ">=24.18.0"
   },
   "scripts": {
     "lint": "eslint .",
@@ -26,7 +26,8 @@
     "build:jupyterlite:free": "bash ./node_modules/@gen3/workspaces/dist/jupyterlite-builds/scripts/build-jupyterlite.sh free ./builds",
     "build:jupyterlite:remote": "bash ./node_modules/@gen3/workspaces/dist/jupyterlite-builds/scripts/build-jupyterlite.sh remote ./builds",
     "build:jupyterlite:assets": "bash ./node_modules/@gen3/workspaces/dist/jupyterlite-builds/scripts/sync-jupyter-assets-into-package.sh ./builds",
-    "build:jupyterlite": "npm run build:jupyterlite:free && npm run build:jupyterlite:remote && npm run build:jupyterlite:assets"
+    "build:jupyterlite": "npm run build:jupyterlite:free && npm run build:jupyterlite:remote && npm run build:jupyterlite:assets",
+    "build:docker": "docker build -t gen3:mc2dp -f Dockerfile.production ."
   },
   "dependencies": {
     "@datadog/browser-rum": "^6.22.0",

@@ -14,6 +14,7 @@ const basePath = process.env.NEXT_PUBLIC_BASEPATH;
 dns.setDefaultResultOrder('ipv4first');
 
 const isDev = process.env.NODE_ENV === 'development';
+const configuredBasePath = process.env.BASE_PATH || '';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const withMDX = require('@next/mdx')({
@@ -33,18 +34,8 @@ const nextConfig = {
   },
   reactStrictMode: true,
   pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
-  basePath: process.env.BASE_PATH || '',
+  basePath: configuredBasePath,
   transpilePackages: ['@gen3/core', '@gen3/frontend', '@gen3/workspaces'],
-  images: {
-    localPatterns: [
-      {
-        pathname: '/icons/**',
-      },
-      {
-        pathname: '/images/**',
-      },
-    ],
-  },
   logging: {
     fetches: {
       fullUrl: true,

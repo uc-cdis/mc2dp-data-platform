@@ -1,16 +1,17 @@
 {
   "name": "mc2dp-data-commons",
-  "version": "0.12.54",
+  "version": "0.12.61",
   "private": "true",
   "engines": {
-    "npm": ">=11.9.0",
-    "node": ">=24.15.0"
+    "npm": ">=11.16.0",
+    "node": ">=24.18.0"
   },
   "scripts": {
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "predev": " NODE_ENV=development npm run build:middlewarePaths",
     "dev": "next dev --webpack",
+    "dev:turbopack": "next dev",
     "prebuild": "NODE_ENV=production npm run build:middlewarePaths",
     "build": "next build --webpack",
     "build:volume": "npm run build:middlewarePathsMatchAll && next build --webpack",
@@ -25,16 +26,17 @@
     "build:jupyterlite:free": "bash ./node_modules/@gen3/workspaces/dist/jupyterlite-builds/scripts/build-jupyterlite.sh free ./builds",
     "build:jupyterlite:remote": "bash ./node_modules/@gen3/workspaces/dist/jupyterlite-builds/scripts/build-jupyterlite.sh remote ./builds",
     "build:jupyterlite:assets": "bash ./node_modules/@gen3/workspaces/dist/jupyterlite-builds/scripts/sync-jupyter-assets-into-package.sh ./builds",
-    "build:jupyterlite": "npm run build:jupyterlite:free && npm run build:jupyterlite:remote && npm run build:jupyterlite:assets"
+    "build:jupyterlite": "npm run build:jupyterlite:free && npm run build:jupyterlite:remote && npm run build:jupyterlite:assets",
+    "build:docker": "docker build -t gen3:mc2dp -f Dockerfile.production ."
   },
   "dependencies": {
     "@datadog/browser-rum": "^6.22.0",
     "@fontsource/montserrat": "^5.2.8",
     "@fontsource/poppins": "^5.2.7",
     "@fontsource/source-sans-pro": "^5.2.5",
-    "@gen3/core": "0.12.54",
-    "@gen3/frontend": "0.12.54",
-    "@gen3/workspaces": "0.12.54",
+    "@gen3/core": "0.12.61",
+    "@gen3/frontend": "0.12.61",
+    "@gen3/workspaces": "0.12.61",
     "@mantine/core": "^9.4.0",
     "@mantine/dates": "^9.4.0",
     "@mantine/form": "^9.4.0",
@@ -43,7 +45,7 @@
     "@mantine/notifications": "^9.4.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.2.10",
+    "@next/mdx": "^16.2.12",
     "idb": "^8.0.3",
     "jsonpath-plus": "^10.3.0",
     "lodash": "^4.17.23",
@@ -59,10 +61,8 @@
   },
   "devDependencies": {
     "@axe-core/react": "^4.10.2",
-    "@gen3/toolsff": "0.12.54",
+    "@gen3/toolsff": "0.12.61",
     "@graphiql/react": "^0.37.4",
-    "eslint": "^9.28.0",
-    "eslint-config-next": "16.2.6",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/line-clamp": "^0.4.4",
@@ -76,6 +76,8 @@
     "@typescript-eslint/eslint-plugin": "^8.46.1",
     "@typescript-eslint/parser": "^8.46.1",
     "autoprefixer": "^10.4.21",
+    "eslint": "^9.28.0",
+    "eslint-config-next": "16.2.6",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -85,7 +87,7 @@
     "graphiql": "^5.2.3",
     "jest-fixed-jsdom": "^0.0.10",
     "msw": "^2.11.5",
-    "next": "^16.2.10",
+    "next": "^16.2.12",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
     "postcss-loader": "^8.2.0",
@@ -100,5 +102,11 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.1"
+  },
+  "allowScripts": {
+    "unrs-resolver": true,
+    "fsevents": true,
+    "msw": true,
+    "sharp": true
   }
 }

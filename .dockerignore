@@ -1,1 +1,9 @@
 node_modules
+builds
+.next
+.idea
+.swc
+.github
+.cockle_temp
+cockle_wasm_env
+.jupyterlite.doit.db

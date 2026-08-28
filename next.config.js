@@ -9,12 +9,26 @@ const path = require('path');
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const { withJupyterWorkspaces } = require('@gen3/workspaces/server');
 
+// get the version of the frontend package
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const packageJson = require(
+  path.resolve(
+    __dirname,
+    'node_modules',
+    '@gen3',
+    'frontend',
+    'package.json',
+  ),
+);
+
+
+console.log('version:', packageJson.version);
+
 const basePath = process.env.NEXT_PUBLIC_BASEPATH;
 
 dns.setDefaultResultOrder('ipv4first');
 
 const isDev = process.env.NODE_ENV === 'development';
-const configuredBasePath = process.env.BASE_PATH || '';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const withMDX = require('@next/mdx')({
@@ -31,10 +45,11 @@ const nextConfig = {
   output: 'standalone',
   env: {
     version: process.env.npm_package_version,
+    NEXT_PUBLIC_GEN3_VERSION: packageJson.version,
   },
   reactStrictMode: true,
   pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
-  basePath: configuredBasePath,
+  basePath: basePath,
   transpilePackages: ['@gen3/core', '@gen3/frontend', '@gen3/workspaces'],
   logging: {
     fetches: {

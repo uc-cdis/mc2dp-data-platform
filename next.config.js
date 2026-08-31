@@ -1,16 +1,28 @@
 // @ts-check
 
 'use strict';
-
+const path = require('path');
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const dns = require('dns');
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const path = require('path');
-// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { withJupyterWorkspaces } = require('@gen3/workspaces/server');
 
-// get the version of the frontend package
+dns.setDefaultResultOrder('ipv4first');
+
+const basePath = process.env.BASE_PATH || '';
+
+const isDev = process.env.NODE_ENV === 'development';
+
 // eslint-disable-next-line @typescript-eslint/no-require-imports
+const withMDX = require('@next/mdx')({
+  extension: /\.(md|mdx)$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
+// get the version of the frontend package
 const packageJson = require(
   path.resolve(
     __dirname,
@@ -23,21 +35,6 @@ const packageJson = require(
 
 
 console.log('version:', packageJson.version);
-
-const basePath = process.env.NEXT_PUBLIC_BASEPATH;
-
-dns.setDefaultResultOrder('ipv4first');
-
-const isDev = process.env.NODE_ENV === 'development';
-
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const withMDX = require('@next/mdx')({
-  extension: /\.(md|mdx)$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-});
 
 // Next configuration with support for writing API to existing common services
 /** @type {import('next').NextConfig} */
@@ -56,7 +53,7 @@ const nextConfig = {
       fullUrl: true,
     },
   },
-  webpack: (config, { dev }) => {
+  webpack: (config) => {
     config.infrastructureLogging = {
       level: 'error',
     };

@@ -116,7 +116,6 @@
     "fsevents": true,
     "msw": true,
     "sharp": true,
-    "@swc/core": true,
-    "@parcel/watcher@2.6.0": true
+    "@swc/core": true
   }
 }

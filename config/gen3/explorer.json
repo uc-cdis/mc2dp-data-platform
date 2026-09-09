@@ -49,6 +49,7 @@
             "gen3_discovery.data_source": {
               "field": "gen3_discovery.data_source",
               "label": "Data Source",
+              "description": "Data sources providing data to the platform. See the 'Data Connections' tab for more information. When multiple data commons names appear separated by commas, this indicates the subject's crosswalk across those data sources.",
               "moveValuesToBottom": [
                 "aggregated data",
                 "Metabolomics",
@@ -58,42 +59,67 @@
             "gen3_discovery.data_source_project": {
               "field": "gen3_discovery.data_source_project",
               "label": "Data Source Project",
-              "moveValuesToBottom": ["no data"]
+              "description": "Lists the project(s) within each data source (e.g., APOLLO, PROMETHEUS, VA projects).",
+              "moveValuesToBottom": [
+                "no data"
+              ]
             },
             "gen3_discovery.is_data_files": {
               "field": "gen3_discovery.is_data_files",
               "label": "Has data files",
-              "moveValuesToBottom": ["False"]
+              "description": "Indicates whether the aggregated subject has files available from at least one data source.",
+              "moveValuesToBottom": [
+                "False"
+              ]
             },
             "gen3_discovery.subject_primary_disease": {
               "field": "gen3_discovery.subject_primary_disease",
               "label": "Primary Disease",
-              "moveValuesToBottom": ["no data"]
+              "description": "Lists the primary disease(s) for a subject, aggregated across data sources. Comma-separated values indicate different primary diseases reported for the same patient across different data sources.",
+              "moveValuesToBottom": [
+                "no data"
+              ]
             },
             "gen3_discovery.subject_cancer_type": {
               "field": "gen3_discovery.subject_cancer_type",
               "label": "Cancer Type",
-              "moveValuesToBottom": ["no data"]
+              "description": "Lists the cancer type(s) for a subject, aggregated across data sources. Comma-separated values indicate different cancer types reported for the same patient across different data sources.",
+              "moveValuesToBottom": [
+                "no data"
+              ]
             },
             "gen3_discovery.subject_metastasis": {
               "field": "gen3_discovery.subject_metastasis",
               "label": "Metastasis",
-              "moveValuesToBottom": ["no data"]
+              "description": "Indicates whether the cancer has spread from the primary site to distant parts of the body (Yes, No, or No Data).",
+              "moveValuesToBottom": [
+                "no data"
+              ]
             },
             "gen3_discovery.subject_type_of_exposures": {
               "field": "gen3_discovery.subject_type_of_exposures",
               "label": "Type of Exposure",
-              "moveValuesToBottom": ["no data"]
+              "description": "Lists aggregated subjects with exposure data present, along with the count of subjects exposed to each type of exposure.",
+              "moveValuesToBottom": [
+                "no data"
+              ]
             },
             "gen3_discovery.subject_cancer_stage": {
               "field": "gen3_discovery.subject_cancer_stage",
               "label": "Cancer Stage",
-              "moveValuesToBottom": ["no data"]
+              "description": "Shows how far the cancer has progressed for the aggregated subject, based on standard staging classifications.",
+              "moveValuesToBottom": [
+                "no data"
+              ]
             },
             "gen3_discovery.subject_cancer_grade": {
               "field": "gen3_discovery.subject_cancer_grade",
               "label": "Cancer Grade",
-              "moveValuesToBottom": ["Unknown", "no data"]
+              "description": "Reflects how abnormal the cancer cells appear under a microscope for the aggregated subject, which can indicate how quickly the cancer is likely to grow or spread.",
+              "moveValuesToBottom": [
+                "Unknown",
+                "no data"
+              ]
             }
           }
         }
@@ -337,7 +363,9 @@
         "referenceIdFieldInResourceIndex": "subject_id",
         "referenceIdFieldInDataIndex": "subject_id"
       },
-      "accessibleFieldCheckList": ["gen3_discovery.authz"],
+      "accessibleFieldCheckList": [
+        "gen3_discovery.authz"
+      ],
       "accessibleValidationField": "gen3_discovery.subject_id"
     }
   }

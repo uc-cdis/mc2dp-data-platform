@@ -188,9 +188,6 @@ module.exports = {
     'text-xxs',
     'text-xxxs',
     'h-20',
-    'pl-[25%]',
-    'pl-[33%]',
-    'pl-[50%]',
     {
       pattern:
         /bg-(primary|secondary|accent|accent-warm|accent-cool|base)-(min|lightest|lighter|light|dark|darker|darkest|max)/,

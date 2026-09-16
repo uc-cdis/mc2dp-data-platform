@@ -9,12 +9,14 @@
       "className": "text-center text-xl font-medium"
     },
     {
+      "className": "pl-[25%] text-[1rem]",
       "type": "markdown",
       "text": "**Already have access?**  \n \n Please choose one of the following login options: \n * Sign in with Google or Microsoft if your MC2DP access is linked to it. \n * Sign in via InCommon if your organization is part of the InCommon Federation. \n * Sign in with ORCID if you have an ORCID ID; please provide it to the MC2DP admin beforehand."
     }
   ],
   "bottomContent": [
     {
+      "className": "pl-[25%] text-[1rem]",
       "type": "markdown",
       "text": "**Need Access?**  \n \n Submit a request by filling out form, and our team will review it. You will be notified via email once your access is approved. [Request access to MC2DP](https://forms.gle/gHkKB2HzpBhUbymS6)  \n \n For details, see our [Documentation Page](https://uc-cdis.github.io/mc2dp-docs/). Questions? Email [mc2dp@occ-data.org](mailto:mc2dp@occ-data.org)."
     }

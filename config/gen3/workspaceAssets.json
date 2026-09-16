@@ -10,7 +10,6 @@
     "@jupyterlab/docmanager-extension:download",
     "@jupyterlab/filebrowser-extension:download",
     "@jupyterlab/notebook-extension:export",
-    "@jupyterlab/workspaces-extension:menu",
-    "@jupyterlab/workspaces-extension:commands"
+    "@jupyterlab/workspaces-extension:menu"
   ]
 }

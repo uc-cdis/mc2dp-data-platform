@@ -49,7 +49,12 @@
     },
     "/Workspaces": {
       "loginRequired": true,
-      "authz": ["/pages/see-workspace"]
+      "authz": ["/pages/see-workspace"],
+      "redirect403": "/WorkspaceRequestAccess"
+    },
+    "/WorkspaceRequestAccess": {
+      "loginRequired": true,
+      "authz": ["/pages/see-workspace-request-access"]
     },
     "/app/CohortDiscovery": {
       "loginRequired": true,

@@ -3,6 +3,7 @@
   "faviconUrl": "/icons/favicon.ico",
   "gatewayBaseUrl": "/lw-workspace/proxy/",
   "remoteKernelsPath": "/lw-workspace/proxy/jeg-proxy",
+  "serverExtensionProxyBaseUrl": "http://workspace-proxy-service",
   "additionalDisabledExtensions": [
     "@jupyterlab/docmanager-extension:download",
     "@jupyterlab/filebrowser-extension:download",

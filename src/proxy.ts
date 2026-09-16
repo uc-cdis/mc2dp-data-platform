@@ -17,6 +17,7 @@ export const config = {
   "/Query",
   "/Submission",
   "/Workspaces",
+  "/WorkspaceRequestAccess",
   "/app/CohortDiscovery",
   "/app/MetadataDictionary"
 ],

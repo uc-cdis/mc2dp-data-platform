@@ -3,7 +3,6 @@
   "faviconUrl": "/icons/favicon.ico",
   "gatewayBaseUrl": "/lw-workspace/proxy/",
   "remoteKernelsPath": "/lw-workspace/proxy/jeg-proxy",
-  "serverExtensionProxyBaseUrl": "https://qa-prometheus.planx-pla.net",
   "additionalDisabledExtensions": [
     "@jupyterlab/docmanager-extension:download",
     "@jupyterlab/filebrowser-extension:download",

@@ -5,6 +5,6 @@
     "logoutInactiveUsers": true,
     "monitorWorkspace": false,
     "expireWarningMinutes": 0,
-    "renewAccessTokenEarlyMilliseconds": 15000
+    "renewAccessTokenEarlyMilliseconds": 960000
   }
 }

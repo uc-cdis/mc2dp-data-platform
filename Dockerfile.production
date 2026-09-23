@@ -69,7 +69,6 @@ COPY --from=builder --chown=nextjs:nextjs /gen3/start.sh ./start.sh
 COPY --from=builder --chown=nextjs:nextjs /gen3/public ./public
 COPY --from=builder --chown=nextjs:nextjs /gen3/config ./config
 COPY --from=builder --chown=nextjs:nextjs /gen3/jupyter-workspaces ./jupyter-workspaces
-RUN apk add --no-cache curl
 
 RUN mkdir -p .next/standalone/.next/cache/images && \
     chmod -R 777 .next/standalone/.next/cache && \

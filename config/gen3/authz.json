@@ -21,8 +21,7 @@
       "authz": ["/pages/see-dataconnections"]
     },
     "/DataDictionary": {
-      "loginRequired": true,
-      "authz": ["/pages/see-datadictionary"]
+      "loginRequired": true
     },
     "/DataLibrary": {
       "loginRequired": true,

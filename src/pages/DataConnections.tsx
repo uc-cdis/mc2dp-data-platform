@@ -10,12 +10,12 @@ import { GetServerSideProps } from 'next';
 const StatsPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
   const elements = [
      {
-      "source": "Renal Cell Carcinoma (RCC)",
+      "source": "Renal Cell Carcinoma (RCC) (Pre-publication)",
       "cohortStudy": "Cohort F (VABio Legacy/APOLLO5 cohort). A subset of individuals have RCC.",
       "datatype": "Entire Cohort F contains: Clinical OMOP CDM (n=348), Primary Oncology (n=314), Epidemiology (n=534), Genomics (n=49), RCC cohort (n=23)",
       "description": "RCC is a pre-release collection of data for an Analysis Working Group, with data drawn from multiple sources rather than from a single data source. The sources contributing to it are: (1) Clinical OMOP CDM: longitudinal clinical EHR data in OMOP CDM format for all Veterans in Cohort F, including RCC and non-RCC cases. For RCC, clear cell kidney adenocarcinomas, papillary or mixed cell kidney adenocarcinomas, and kidney renal cell carcinomas including chromophobe type are represented. (2) Primary Oncology: data for all Veterans in Cohort F, including RCC and non-RCC cases, with histology diagnosis based on ICDO3X, primary site, date of diagnosis, tumor morphology, surgery and treatment details among others. Targeted variables based on Histology ICDO3X, primary site and date of diagnosis were used for the RCC pilot analysis, focusing only on the cohort with RCC. (3) Epidemiology: questionnaire data for all Veterans in Cohort F, including RCC and non-RCC cases, covering exposure information on smoking, alcohol, military exposures and military branch association. The RCC pilot analysis used only the epidemiology data specific to the RCC cohort. (4) Genomics: whole genome sequencing data processed using the DRAGEN pipeline, consisting of somatic DNA mutations (MAF), somatic copy number mutations, tumor gene expression and germline VCFs from 49 individuals. The RCC pilot analysis was conducted on genomic data specific to the RCC cohort.",
       "type": "Clinical OMOP CDM data for Cohort F connected to ATLAS and PLP apps (VPODC). Primary Oncology, Epidemiology and Genomics connected to secure workspaces in VPODC/MC2DP",
-      "status": "[Pre-release - Real Data]",
+      "status": "[Pre-publication - Real Data]",
       "patients": "RCC cohort (n = 23)"
     },
     {

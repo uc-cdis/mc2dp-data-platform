@@ -1,5 +1,9 @@
 {
   "routes": {
+    "/": {
+      "loginRequired": true,
+      "authz": ["/pages/see-homepage"]
+    },
     "/AISearch": {
       "loginRequired": true,
       "authz": ["/pages/see-aisearch"]

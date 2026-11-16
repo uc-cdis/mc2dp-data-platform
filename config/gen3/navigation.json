@@ -28,25 +28,38 @@
         "icon": "gen3:analysis",
         "href": "/DataConnections",
         "name": "Data Connections",
-        "tooltip": "View the metadata data schemas."
+        "tooltip": {
+          "loginRequired": "You don't have access to this section. Please log in.",
+          "unauthorized": "You don't have access to this section. Please request access.",
+          "authorized": "View the metadata data schemas."
+        }
       },
       {
         "icon": "gen3:analysis",
         "href": "/Analysis",
         "name": "Analysis",
-        "tooltip": "Learn how to use Jupyter Notebooks to explore and visualize data available by running a tutorial notebook, or use one of these examples as a launching point for your own custom analysis."
+        "tooltip": {
+          "loginRequired": "You don't have access to this section. Please log in.",
+          "unauthorized": "You don't have access to this section. Please request access.",
+          "authorized": "Learn how to use Jupyter Notebooks to explore and visualize data available by running a tutorial notebook, or use one of these examples as a launching point for your own custom analysis."
+        }
       },
       {
         "icon": "gen3:list",
         "href": "/DataLibrary",
         "name": "Data Library",
-        "tooltip": "Create and manage lists of data"
+        "tooltip": {
+          "loginRequired": "You don't have access to this section. Please log in.",
+          "unauthorized": "You don't have access to this section. Please request access.",
+          "authorized": "Create and manage lists of data"
+        }
       },
       {
         "name": "Workspaces",
         "href": "/Workspaces",
         "icon": "gen3:workspace",
         "tooltip": {
+          "loginRequired": "You don't have access to this section. Please log in.",
           "unauthorized": "You don't have access to Workspace. Please make a request to apply for access.",
           "authorized": "Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources."
         },
@@ -56,7 +69,11 @@
         "icon": "gen3:profile",
         "href": "/Profile",
         "name": "Profile",
-        "tooltip": "Create API keys for programmatic data access, and review your authorization privileges to datasets and services."
+        "tooltip": {
+          "loginRequired": "You don't have access to this section. Please log in.",
+          "unauthorized": "You don't have access to Workspace. Please request access.",
+          "authorized": "Create API keys for programmatic data access, and review your authorization privileges to datasets and services."
+        }
       }
     ]
   },

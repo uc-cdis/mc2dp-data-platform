@@ -11,7 +11,7 @@
     {
       "className": "pl-[25%] text-[1rem]",
       "type": "markdown",
-      "text": "**Already have access?**  \n \n Please choose one of the following login options: \n * Sign in with Google or Microsoft if your MC2DP access is linked to it. \n * Sign in via InCommon if your organization is part of the InCommon Federation. \n * Sign in with ORCID if you have an ORCID ID; please provide it to the MC2DP admin beforehand."
+      "text": "**Already have access?**\n\nPlease choose one of the following login options:\n\n* Sign in with **Google** if your MC2DP access is linked to your Google account.\n* Sign in with **CILogon** to use your institutional credentials. Search for your organization in the list.\n* Sign in with **ORCID** if your ORCID iD is registered with the MC2DP admin.\n\nIf you have logged in before, please use the same option you used previously."
     }
   ],
   "bottomContent": [

@@ -11,7 +11,7 @@
     {
       "className": "pl-[25%] text-[1rem]",
       "type": "markdown",
-      "text": "**Already have access?**\n\nPlease choose one of the following login options:\n\n* Sign in with **Google** if your MC2DP access is linked to your Google account.\n* Sign in with **CILogon** to use your institutional credentials. Search for your organization in the list.\n* Sign in with **ORCID** if your ORCID iD is registered with the MC2DP admin.\n\nIf you have logged in before, please use the same option you used previously."
+      "text": "**Already have access?**\n\nSign in using the same method and account that you registered with the MC2DP team. Your access is tied to the email address or ORCID ID on file, so the account you sign in with must match it. Please choose one of the following login options:\n\n* Sign in with **Google** : Use this if your organization uses Google Workspace and if you requested access to MC2DP with this organizational email. Note, this is not a personal @gmail.com account.\n* Sign in with **CILogon** : Use this if you requested access to MC2DP with your institutional email or ORCID ID. Select your identity provider from the list (ORCID or your institution), then sign in with that account."
     }
   ],
   "bottomContent": [
